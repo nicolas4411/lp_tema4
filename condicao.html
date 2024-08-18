@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Idade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #333;
+            font-size: 2em;
+            margin: 0 0 10px;
+        }
+        p {
+            color: #555;
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        /* Ajustes de responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo">Verificação de nota</h1>
+        <p id="mensagem"></p>
+    </div>
+
+    <script>
+        let nota = prompt("Qual a sua nota (somente serão aceitas notas entre 0 e 100, e somente números!)?");
+        let mensagem;
+        if(nota === String){
+           
+           console.log("somente números! ");
+        }
+        else if (nota < 0 ) {
+            alert("digite uma nota valida.");
+            mensagem = "digite uma nota valida! ";
+
+        }else if(nota >= 0 && nota <=49) {
+            alert("você foi reprovado!");
+            mensagem = "Você foi reprovado! ";
+
+        }else if(nota >=50 && nota <= 100){
+            alert("parabéns boa nota! ");
+            mensagem = "aluno aprovado! ";
+
+        }else {
+            alert("nota invalida! ");
+            mensagem = "impossivel avaliar! ";
+
+        }
+
+        // Exibe a mensagem na página
+        const mensagemElemento = document.getElementById('mensagem');
+        mensagemElemento.textContent = "Sua nota é: "+ nota + "." + mensagem; //ACRESECENTEI
+    </script>
+</body>
+</html>

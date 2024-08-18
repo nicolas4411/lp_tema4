@@ -1,0 +1,85 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Conteúdo com JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: red;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            max-width: 300px;
+        }
+        h1 {
+            color: #333;
+            font-size: 2em;
+            margin: 0 0 10px;
+        }
+        p {
+            color: #555;
+            font-size: 1.2em;
+            margin: 0 0 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Ajustes de responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            p, button {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2em;
+            }
+            p, button {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>nunca e tarde</h1>
+        <p id="minhaDiv">estudar nunca sai de moda</p>
+        
+        <button onclick="alterarConteudo()">vale a pena</button> <p><p>
+        
+    </div>
+    
+    
+
+    <script>
+        function alterarConteudo() {
+            document.getElementById("minhaDiv").innerHTML = "<strong>descubra um novo mundo, realize seus sonhos!</strong>"; //strong
+            
+        }
+    </script>
+</body>
+</html>
